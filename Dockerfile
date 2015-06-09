@@ -8,5 +8,5 @@ RUN apt-get install -y pagekite
 
 RUN rm /etc/pagekite.d/20_frontends.rc
 
-CMD pagekite.py --clean --frontend=$CLOUDFLEET_HOST --service_on=https:blimp.$CLOUDFLEET_DOMAIN:nginx:80:$CLOUDFLEET_DOMAIN
+CMD pagekite.py --clean --frontend=$CLOUDFLEET_HOST --service_on=https:blimp.$CLOUDFLEET_DOMAIN:nginx:80:$CLOUDFLEET_SECRET
 
