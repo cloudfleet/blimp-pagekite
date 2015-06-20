@@ -11,4 +11,3 @@ RUN rm /etc/pagekite.d/20_frontends.rc
 CMD pagekite --clean \
              --frontend=$CLOUDFLEET_HOST \
              --service_on=http,https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET
-
