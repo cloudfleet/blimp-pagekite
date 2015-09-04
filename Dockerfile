@@ -8,6 +8,12 @@ RUN apt-get install -y pagekite
 
 RUN rm /etc/pagekite.d/20_frontends.rc
 
+# pagekite.net service
 CMD pagekite --clean \
-             --frontend=$CLOUDFLEET_HOST \
-             --service_on=http,https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET
+            --defaults \
+            --service_on=http,https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET
+
+# our pagekite server
+# CMD pagekite --clean \
+#             --frontend=$CLOUDFLEET_HOST \
+#             --service_on=http,https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET
