@@ -11,7 +11,8 @@ RUN rm /etc/pagekite.d/20_frontends.rc
 # pagekite.net service
 CMD pagekite --clean \
             --defaults \
-            --service_on=http,https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET
+            --service_on=https:blimp.$CLOUDFLEET_DOMAIN:nginx:443:$CLOUDFLEET_SECRET \
+            --service_on=http:blimp.$CLOUDFLEET_DOMAIN:nginx:80:$CLOUDFLEET_SECRET
 
 # our pagekite server
 # CMD pagekite --clean \
