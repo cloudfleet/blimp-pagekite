@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu
 
 RUN echo "deb http://pagekite.net/pk/deb/ pagekite main" > /etc/apt/sources.list.d/pagekite_net_pk_deb.list
 RUN apt-key adv --recv-keys --keyserver keys.gnupg.net AED248B1C7B2CAC3
